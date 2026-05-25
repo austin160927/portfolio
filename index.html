@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Austin Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+            scroll-behavior:smooth;
+        }
+body{
+    background:linear-gradient(to right,#fdf6ec,#fefaf4);
+    color:#000000;
+    overflow-x:hidden;
+}
+
+/* TOP CONTACT BAR */
+
+.top-bar{
+    width:100%;
+    background:#ead7c3;
+    color:#000000;
+    padding:10px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:14px;
+    flex-wrap:wrap;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:18px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.05);
+}
+
+nav h1{
+    font-size:30px;
+    color:#b08968;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#000000;
+    font-size:15px;
+    font-weight:500;
+    transition:0.4s;
+}
+
+nav ul li a:hover{
+    color:#b08968;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:120px 10%;
+    gap:80px;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h4{
+    color:#b08968;
+    letter-spacing:3px;
+    margin-bottom:15px;
+    font-size:16px;
+}
+
+.hero-text h1{
+    font-size:65px;
+    margin-bottom:15px;
+    color:#000000;
+}
+
+.hero-text h2{
+    color:#b08968;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    color:#000000;
+    line-height:32px;
+    font-size:17px;
+    margin-bottom:30px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:linear-gradient(to right,#d6bfa7,#c7a17a);
+    color:white;
+    text-decoration:none;
+    border-radius:12px;
+    transition:0.4s;
+    font-weight:600;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+.resume-home-btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:white;
+    color:#b08968;
+    text-decoration:none;
+    border-radius:12px;
+    border:2px solid #d6bfa7;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.resume-home-btn:hover{
+    background:#d6bfa7;
+    color:white;
+    transform:translateY(-5px);
+}
+
+/* IMAGE */
+
+.hero-image img{
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    object-fit:cover;
+    border:8px solid white;
+    box-shadow:0px 10px 30px rgba(214,191,167,0.35);
+}
+
+/* SECTION */
+
+section{
+    width:85%;
+    margin:auto;
+    margin-top:70px;
+    padding:50px;
+    background:white;
+    border-radius:25px;
+    box-shadow:0px 8px 20px rgba(0,0,0,0.05);
+}
+
+section h2{
+    font-size:35px;
+    color:#b08968;
+    margin-bottom:25px;
+}
+
+section p{
+    font-size:17px;
+    line-height:34px;
+    color:#000000;
+    margin-bottom:15px;
+}
+
+/* SKILLS */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.skill-card{
+    background:#fdf6ec;
+    padding:30px;
+    border-radius:20px;
+    transition:0.4s;
+    border:1px solid #ead7c3;
+}
+
+.skill-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0px 10px 20px rgba(214,191,167,0.25);
+}
+
+.skill-card h3{
+    color:#b08968;
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+.skill-items{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill-items span{
+    background:#f3e5d4;
+    color:#000000;
+    padding:10px 18px;
+    border-radius:12px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* PROJECTS */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.project-card{
+    background:#fdf6ec;
+    padding:35px;
+    border-radius:25px;
+    transition:0.5s;
+    border:1px solid #ead7c3;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0px 15px 30px rgba(214,191,167,0.25);
+}
+
+.project-number{
+    width:55px;
+    height:55px;
+    background:linear-gradient(to right,#d6bfa7,#c7a17a);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.project-card h3{
+    margin-bottom:15px;
+    font-size:25px;
+    color:#000000;
+}
+
+.project-card p{
+    font-size:15px;
+    line-height:28px;
+    margin-bottom:20px;
+}
+
+.project-tech{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.project-tech span{
+    background:#f3e5d4;
+    color:#000000;
+    padding:8px 15px;
+    border-radius:10px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.project-btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:linear-gradient(to right,#d6bfa7,#c7a17a);
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* EDUCATION */
+
+.education-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.edu-box{
+    background:#fdf6ec;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.4s;
+    border:1px solid #ead7c3;
+}
+
+.edu-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0px 10px 20px rgba(214,191,167,0.25);
+}
+
+.edu-box h3{
+    color:#b08968;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.edu-box p{
+    font-size:22px;
+    font-weight:600;
+    color:#000000;
+}
+
+/* SOCIAL */
+
+.social-links{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.social-links a{
+    text-decoration:none;
+    background:#f3e5d4;
+    color:#000000;
+    padding:12px 22px;
+    border-radius:10px;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.social-links a:hover{
+    background:#d6bfa7;
+    color:white;
+}
+
+/* CONTACT */
+
+.contact-box{
+    background:#fdf6ec;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid #ead7c3;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:70px;
+    text-align:center;
+    padding:30px;
+    background:#ead7c3;
+    color:#000000;
+    line-height:30px;
+}    </style>
+
+</head>
+
+<body>
+
+    <!-- TOP CONTACT BAR -->
+
+    <div class="top-bar">
+
+        <div>
+            📧 sureshaustin1@gmail.com
+        </div>
+
+        <div>
+            📞 +91 6379549579
+        </div>
+
+    </div>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <h1>Austin</h1>
+
+        <ul>
+
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <div class="hero">
+
+        <div class="hero-text">
+
+            <h4>WELCOME TO MY WORLD</h4>
+
+            <h1>Hi, I'm Austin</h1>
+
+            <h2>Full Stack Developer</h2>
+
+            <p>
+                Passionate about technology, creativity,
+                teamwork, web development, and continuous learning.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#about" class="btn">
+                    Explore More
+                </a>
+
+                <a href="Austin_S_Resume.docx" download class="resume-home-btn">
+                    Download Resume
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="WhatsApp Image 2026-05-22 at 10.50.09 PM.jpeg" alt="Austin">
+
+        </div>
+
+    </div>
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            Hello! I'm Austin, a passionate Full Stack Development learner who loves exploring technology and computers.
+        </p>
+
+        <p>
+            I enjoy learning new technologies, building creative projects, and improving my practical implementation skills.
+        </p>
+
+        <p>
+            Apart from technology, I enjoy chess, reading books, writing poems, and discussing social topics.
+        </p>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+
+                <h3>Coding Languages</h3>
+
+                <div class="skill-items">
+
+                    <span>Python</span>
+                    <span>C</span>
+                    <span>C++</span>
+                    <span>R</span>
+
+                </div>
+
+            </div>
+
+            <div class="skill-card">
+
+                <h3>Web & App Building</h3>
+
+                <div class="skill-items">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Flutter</span>
+
+                </div>
+
+            </div>
+
+            <div class="skill-card">
+
+                <h3>Databases</h3>
+
+                <div class="skill-items">
+
+                    <span>SQL</span>
+                    <span>MongoDB</span>
+                    <span>DBMS</span>
+
+                </div>
+
+            </div>
+
+            <div class="skill-card">
+
+                <h3>Tools & Software</h3>
+
+                <div class="skill-items">
+
+                    <span>Git</span>
+                    <span>VS Code</span>
+                    <span>Tally Prime</span>
+                    <span>MS Excel</span>
+
+                </div>
+
+            </div>
+
+            <div class="skill-card">
+
+                <h3>Design Tools</h3>
+
+                <div class="skill-items">
+
+                    <span>Figma</span>
+                    <span>Canva</span>
+                    <span>Photoshop</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+
+                <div class="project-number">01</div>
+
+                <h3>Movie Website</h3>
+
+                <p>
+                    Developed a responsive Movie Website during my UG internship using HTML and CSS.
+                </p>
+
+                <div class="project-tech">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+
+                </div>
+
+                <a href="movie.html" class="project-btn">
+                    View Project
+                </a>
+
+            </div>
+
+            <div class="project-card">
+
+                <div class="project-number">02</div>
+
+                <h3>Old Age Home Management System</h3>
+
+                <p>
+                    Developed an Old Age Home Management System using HTML, CSS, PHP, and SQL.
+                </p>
+
+                <div class="project-tech">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>PHP</span>
+                    <span>SQL</span>
+
+                </div>
+
+                <a href="oldagehome.html" class="project-btn">
+                    View Project
+                </a>
+
+            </div>
+
+            <div class="project-card">
+
+                <div class="project-number">03</div>
+
+                <h3>Inventory Management System</h3>
+
+                <p>
+                    Currently working on Inventory Management System during PG internship.
+                </p>
+
+                <div class="project-tech">
+
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
+
+                </div>
+
+                <a href="inventory.html" class="project-btn">
+                    View Project
+                </a>
+
+            </div>
+
+            <div class="project-card">
+
+                <div class="project-number">04</div>
+
+                <h3>Portfolio Website</h3>
+
+                <p>
+                    Designed and developed my own responsive personal portfolio website.
+                </p>
+
+                <div class="project-tech">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+
+                </div>
+
+                <a href="portfolio.html" class="project-btn">
+                    View Project
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EDUCATION -->
+
+    <section id="education">
+
+        <h2>Education</h2>
+
+        <div class="education-grid">
+
+            <div class="edu-box">
+
+                <h3>SSLC</h3>
+
+                <p>75.6%</p>
+
+            </div>
+
+            <div class="edu-box">
+
+                <h3>HSC</h3>
+
+                <p>74.5%</p>
+
+            </div>
+
+            <div class="edu-box">
+
+                <h3>UG</h3>
+
+                <p>71%</p>
+
+            </div>
+
+            <div class="edu-box">
+
+                <h3>PG</h3>
+
+                <p>79%</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h2>Contact</h2>
+
+        <div class="contact-box">
+
+            <p>📧 Email : sureshaustin1@gmail.com</p>
+
+            <p>📞 Phone : +91 6379549579</p>
+
+            <p>📍 Location : Tamil Nadu, India</p>
+
+        </div>
+
+    </section>
+
+    <!-- SOCIAL -->
+
+    <section>
+
+        <h2>Social Links</h2>
+
+        <div class="social-links">
+
+            <a href="https://github.com/austin160927">GitHub</a>
+            <a href="https://www.linkedin.com/in/austin-s-477b253b2?utm_source=share_via&utm_content=profile&utm_medium=member_android">LinkedIn</a>
+        
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+
+            📧 sureshaustin1@gmail.com
+        </p>
+
+        <p>
+            📞 +91 6379549579
+        </p>
+
+        <p>
+            © 2026 Austin Portfolio | Full Stack Developer
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

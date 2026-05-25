@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inventory Management System</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            background:linear-gradient(to right,#f8fafc,#e0f2fe);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+            padding:40px;
+        }
+
+        /* PROJECT CARD */
+
+        .project-card{
+            width:900px;
+            background:white;
+            padding:55px;
+            border-radius:30px;
+            box-shadow:0px 10px 35px rgba(0,0,0,0.08);
+            transition:0.5s;
+            position:relative;
+            overflow:hidden;
+        }
+
+        .project-card::before{
+            content:'';
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:8px;
+            background:linear-gradient(to right,#2563eb,#38bdf8);
+        }
+
+        .project-card:hover{
+            transform:translateY(-10px);
+            box-shadow:0px 20px 40px rgba(37,99,235,0.15);
+        }
+
+        /* PROJECT NUMBER */
+
+        .project-number{
+            width:75px;
+            height:75px;
+            background:linear-gradient(to right,#2563eb,#38bdf8);
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            border-radius:50%;
+            font-size:28px;
+            font-weight:bold;
+            margin-bottom:30px;
+        }
+
+        /* TITLE */
+
+        .project-card h1{
+            font-size:42px;
+            color:#0f172a;
+            margin-bottom:25px;
+        }
+
+        /* PARAGRAPH */
+
+        .project-card p{
+            font-size:18px;
+            line-height:36px;
+            color:#475569;
+            margin-bottom:22px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- PROJECT CARD -->
+
+    <div class="project-card">
+
+        <div class="project-number">03</div>
+
+        <h1>Inventory Management System</h1>
+
+        <p>
+            Currently developing an Inventory Management System as part of my PG internship through a team project approach. 
+            The project is being developed to manage inventory operations digitally with better organization, tracking, and workflow management.
+        </p>
+
+        <p>
+            The frontend of the application is being developed using HTML, CSS, and React.js to create a modern, responsive, and interactive user interface. 
+            Node.js is being used for backend development to manage server-side operations, APIs, and application functionality efficiently.
+        </p>
+
+        <p>
+            MongoDB is being used as the database to store and manage product details, stock information, asset records, user data, and inventory transactions securely. 
+            The system is designed to help manage inventory processes such as adding products, updating stock details, tracking available assets, and maintaining organized records.
+        </p>
+
+        <p>
+            This project is helping our team improve practical knowledge in Full Stack Development, API integration, database management, frontend-backend connectivity, and collaborative teamwork during real-time project development.
+        </p>
+
+        <p>
+            Through this internship project, I am gaining hands-on experience in building scalable web applications, understanding real-world project workflows, improving problem-solving abilities, and working effectively in a team-based development environment.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

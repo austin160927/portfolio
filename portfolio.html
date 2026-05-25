@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personal Portfolio Website</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            background:linear-gradient(to right,#f8fafc,#e0f2fe);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+            padding:40px;
+        }
+
+        /* PROJECT CARD */
+
+        .project-card{
+            width:900px;
+            background:white;
+            padding:55px;
+            border-radius:30px;
+            box-shadow:0px 10px 35px rgba(0,0,0,0.08);
+            transition:0.5s;
+            position:relative;
+            overflow:hidden;
+        }
+
+        .project-card::before{
+            content:'';
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:8px;
+            background:linear-gradient(to right,#2563eb,#38bdf8);
+        }
+
+        .project-card:hover{
+            transform:translateY(-10px);
+            box-shadow:0px 20px 40px rgba(37,99,235,0.15);
+        }
+
+        /* PROJECT NUMBER */
+
+        .project-number{
+            width:75px;
+            height:75px;
+            background:linear-gradient(to right,#2563eb,#38bdf8);
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            border-radius:50%;
+            font-size:28px;
+            font-weight:bold;
+            margin-bottom:30px;
+        }
+
+        /* TITLE */
+
+        .project-card h1{
+            font-size:42px;
+            color:#0f172a;
+            margin-bottom:25px;
+        }
+
+        /* PARAGRAPH */
+
+        .project-card p{
+            font-size:18px;
+            line-height:36px;
+            color:#475569;
+            margin-bottom:22px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- PROJECT CARD -->
+
+    <div class="project-card">
+
+        <div class="project-number">04</div>
+
+        <h1>Personal Portfolio Website</h1>
+
+        <p>
+            Developed a Personal Portfolio Website using HTML and CSS as part of my internship learning activities. 
+            The project was created to showcase my personal profile, technical skills, projects, education details, and contact information through a professional web interface.
+        </p>
+
+        <p>
+            The portfolio website was designed with a clean, responsive, and modern user interface using only HTML and CSS. 
+            Different sections such as Home, About Me, Skills, Projects, Education, Resume, Social Links, and Contact were structured properly to create a complete personal portfolio experience.
+        </p>
+
+        <p>
+            The project mainly focused on improving frontend development skills, responsive web designing techniques, layout structuring, animations, card designs, navigation systems, and UI alignment concepts.
+        </p>
+
+        <p>
+            Interactive elements such as hover effects, smooth scrolling navigation, animated sections, responsive cards, and professional color combinations were implemented to make the website visually attractive and user-friendly.
+        </p>
+
+        <p>
+            Through this project, I improved my practical knowledge in HTML and CSS, website structuring, responsive design implementation, and modern frontend UI development concepts while building my own professional portfolio website.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

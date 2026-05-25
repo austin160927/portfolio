@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movie Website Project</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            background:linear-gradient(to right,#f8fafc,#e0f2fe);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        /* PROJECT CARD */
+
+        .project-card{
+            width:700px;
+            background:white;
+            padding:50px;
+            border-radius:30px;
+            box-shadow:0px 10px 30px rgba(0,0,0,0.08);
+            transition:0.5s;
+            position:relative;
+            overflow:hidden;
+        }
+
+        .project-card::before{
+            content:'';
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:8px;
+            background:linear-gradient(to right,#2563eb,#38bdf8);
+        }
+
+        .project-card:hover{
+            transform:translateY(-10px);
+            box-shadow:0px 20px 40px rgba(37,99,235,0.15);
+        }
+
+        /* NUMBER */
+
+        .project-number{
+            width:70px;
+            height:70px;
+            background:linear-gradient(to right,#2563eb,#38bdf8);
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            border-radius:50%;
+            font-size:25px;
+            font-weight:bold;
+            margin-bottom:30px;
+        }
+
+        /* TITLE */
+
+        .project-card h1{
+            font-size:40px;
+            color:#0f172a;
+            margin-bottom:25px;
+        }
+
+        /* DESCRIPTION */
+
+        .project-card p{
+            font-size:18px;
+            line-height:35px;
+            color:#475569;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- PROJECT CARD -->
+
+    <div class="project-card">
+
+        <div class="project-number">01</div>
+
+        <h1>Movie Website</h1>
+
+       <p>
+    Developed a responsive Movie Website using HTML and CSS during my UG internship to provide a simple and interactive movie browsing experience for users. 
+    The website was designed to organize and display movies year-wise, making it easy for users to explore movies based on their release year. 
+    Each movie section contains movie posters, titles, and interactive buttons that allow users to click and watch the selected movie or related video content.
+</p>
+
+<p>
+    The project mainly focused on creating a clean user interface, smooth navigation, responsive layouts, and visually attractive movie cards using only HTML and CSS. 
+    Different sections were designed for various movie categories and years to improve user experience and accessibility. 
+    Hover effects, buttons, layouts, and responsive designs were implemented to make the website more modern and user-friendly.
+</p>
+
+<p>
+    Through this project, I improved my frontend development skills, responsive web design techniques, UI structuring knowledge, and practical implementation of HTML and CSS concepts. 
+    This project also helped me understand website layouts, alignment techniques, styling methods, and how to create visually appealing interfaces without using advanced frameworks or JavaScript.
+</p>
+    </div>
+
+</body>
+
+</html>
